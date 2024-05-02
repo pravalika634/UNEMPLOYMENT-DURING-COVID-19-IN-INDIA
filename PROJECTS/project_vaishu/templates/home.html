@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAISHU</title>
+    <link rel="stylesheet" href="path/to/styles.css"> <!-- Corrected the path to the CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Heading styles */
+        .text-container {
+        border: 2px solid white; /* Border style */
+        padding: 7px; /* Space inside the border */
+        margin: 7px; /* Space outside the border */
+    }
+        /* Heading styles */
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #264653 !important;
+            border-radius: 0;
+            padding: 5px 0;
+            margin: 0;
+        }
+
+        .navbar-brand img {
+            width: 30%;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-family: "Times New Roman", Times, serif;
+            color: #666;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #304146; /* Cobalt color */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer i {
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
+        /* Image hover effect */
+        img {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            opacity: 0.8;
+            transform: scale(1.05); /* Scale up the image slightly */
+        }
+
+        /* Card styles */
+        .card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Zoom out effect */
+        }
+
+        .card-title {
+            color: #fff;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+ /* Styles for card colors */
+.card-leader {
+    background-color: #94A684; /* Red */
+}
+
+.card-member1 {
+    background-color: #AEC3AE; /* Blue */
+}
+
+.card-member2 {
+    background-color: #E4E4D0; /* Green */
+}
+
+.card-member3 {
+    background-color: #58A399; /* Orange */
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='chakri.png') }}" alt="Example Image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team-info">Team Information</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="text-container">
+    
+    <h1>UNEMPLOYMENT DURING COVID: A Data Exploration of Unemployment in India</h1>
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='first.jpg') }}" alt="First Image" style="width: 60%;">
+        <p>Our data analytics project delved into the intricate dynamics of unemployment during the unprecedented times of the COVID-19 pandemic in India.<br>
+            With a meticulous blend of data visualization, dashboard development, and storytelling, we embarked on a journey to unravel the multifaceted impacts of the crisis on employment patterns across the nation.<br>
+            Through insightful visualizations, we elucidated the fluctuating trends, identifying vulnerable sectors, demographic disparities, and the evolving nature of job losses and gains amidst the pandemic's upheaval.<br>
+            Our dashboard served as a comprehensive tool, providing stakeholders with real-time access to crucial metrics, fostering informed decision-making in navigating the challenges posed by the crisis.<br>
+            Accompanied by a compelling narrative, our project not only presented a comprehensive analysis but also illuminated the human stories behind the statistics, amplifying the urgency for targeted interventions to mitigate the socio-economic repercussions of unemployment during these trying times.
+            </p>
+    </div>
+    
+    <h2>DASHBOARD</h2>
+    <div class="text-center">
+        <div style="border: 1px solid white;">
+        <div class='tableauPlaceholder' id='viz1714489257048' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;vaishudashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='vaishudashboard&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;vaishudashboard&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714489257048');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1400px';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1400px';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+</div>
+</div>
+    <p>Our dashboard encapsulates a comprehensive view of the socio-economic landscape amidst the COVID-19 pandemic, presenting crucial insights into geographical employment trends, labor participation rates, and monthly unemployment variations across regions in a visually intuitive format. By seamlessly integrating geographical distribution maps with dynamic charts showcasing employment figures, labor participation rates by area, and monthly unemployment rates, our dashboard offers stakeholders a holistic understanding of the complex interplay between economic activity, workforce engagement, and the impact of the pandemic.<br><br> Through interactive visualization tools, users can explore and analyze trends, identify areas of concern, and inform strategic decision-making to address the challenges posed by the evolving employment scenario during these unprecedented times.</p>
+    <ul>
+        <li>The dashboard provides a bird's-eye view of employment distribution across different regions, aiding in understanding where economic activity is concentrated and where there might be disparities.</li>
+        <li>By presenting labor participation rates by area, it highlights the level of engagement in the workforce, shedding light on the dynamics of employment participation within rural and urban areas.</li>
+        <li>The inclusion of monthly unemployment rate visualizations allows users to track the fluctuating trends over time, enabling timely responses and interventions to mitigate the socio-economic impacts of the pandemic.</li>
+    </ul>
+
+    <h2>STORY</h2>
+    <div class="text-center">
+        <div style="border: 1px solid white;">
+            <div class='tableauPlaceholder' id='viz1714489354217' style='position: relative'><noscript><a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;vaishustory&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='vaishustory&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;vaishustory&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714489354217');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1400px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    </div>
+</div>
+    <p>Amidst the tumultuous waves of the COVID-19 pandemic, our data-driven narrative unfolds, revealing the stark realities of unemployment across regions in India. Through meticulous analysis and visualization, we uncover the intricate dynamics of joblessness, painting a vivid picture of the challenges faced by individuals and communities. Our exploration begins with a deep dive into the estimated unemployment rates by region, illuminating the disparities and vulnerabilities prevalent amidst the crisis. From the bustling urban centers of Delhi to the serene landscapes of Himachal Pradesh, each region grapples with its unique set of socio-economic challenges. The dashboard vividly portrays these variations, offering stakeholders a nuanced understanding of the impact of the pandemic on livelihoods across the nation.<br></p>
+    <p><br>As our journey unfolds, we navigate through the turbulent currents of time, tracing the ebb and flow of unemployment trends across months. From the initial shockwaves of soaring job losses in the early months to the gradual signs of recovery and resilience, the story unfolds with each passing month. Through interactive visualizations, users can discern the patterns, identifying peaks and troughs, and discerning the underlying factors driving these fluctuations. Alongside the unemployment narrative, our dashboard also sheds light on the labor participation rates, providing insights into the engagement levels of the workforce amidst the crisis. Together, these visualizations offer a compelling narrative, empowering stakeholders with the knowledge to navigate through the uncertainties and forge pathways towards recovery and renewal.</p>
+    <ul>
+
+        <li>Regional Disparities in Unemployment: The dashboard illuminates the varying degrees of unemployment across different regions in India, showcasing how states like Bihar and Tripura grapple with significantly higher unemployment rates compared to others such as Karnataka and Tamil Nadu.</li>
+        <li>Temporal Trends in Unemployment: Through dynamic visualizations, the dashboard unveils the temporal evolution of unemployment rates, highlighting the initial spikes during the onset of the pandemic and the subsequent fluctuations over the months, providing crucial insights into the trajectory of recovery and resilience.</li>
+        <li>Labor Participation and Unemployment Dynamics: By juxtaposing labor participation rates with unemployment figures, the dashboard offers a comprehensive understanding of the workforce dynamics during the pandemic, enabling stakeholders to discern patterns of engagement and disengagement amidst the economic upheaval.</li>
+       
+    </ul>
+    
+    <h2>Employment, Labour Participation Rate, and Unemployment Rate by Region</h2>
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='eee.png') }}" alt="Third Image" style="width: 50%;">
+    </div>
+    
+    <p>Amidst the complexities of India's diverse economic landscape, our dataset unravels a tapestry of employment dynamics across regions, shedding light on the nuanced interplay between labor participation, employment, and unemployment rates. From the bustling urban hubs of Delhi and Mumbai to the serene terrains of Himachal Pradesh and the culturally rich landscapes of Tamil Nadu and West Bengal, each region tells a unique story of workforce engagement and economic resilience. Through meticulous analysis, our dataset showcases not only the sheer magnitude of employed individuals but also the challenges faced, as reflected in the labor participation rates and unemployment figures.<br><br>Key points:<br>- The dataset provides a comprehensive overview of estimated employment figures, labor participation rates, and unemployment rates across various states and union territories in India.<br>- Regional disparities in employment and unemployment rates are evident, with some regions grappling with higher rates of joblessness compared to others.<br>- Understanding the dynamics of labor participation alongside unemployment rates is crucial for policymakers and stakeholders in formulating targeted interventions and support mechanisms to address the challenges faced by different regions.<br>- By delving into the granular details of employment trends, our dataset offers valuable insights for driving inclusive economic growth and fostering resilience in the face of evolving socio-economic landscapes.</p>
+    
+    <h2>Geographical Distribution and Estimated Employment by Region</h2>
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='geo.png') }}" alt="Fourth Image" style="width: 50%;">
+    </div>
+    
+    <p>
+        Our dataset provides a geographical perspective on employment distribution across different regions of India, capturing the diversity of economic activities and workforce engagement. From the southern shores of Tamil Nadu to the northern terrains of Uttar Pradesh, each region showcases its unique employment landscape. Through the generated latitude and longitude coordinates, stakeholders can visualize the spatial distribution of employment opportunities, enabling a deeper understanding of regional economic dynamics. This geographical insight is invaluable for policymakers and businesses alike, as it helps in identifying areas with high employment concentrations and potential labor market gaps that may require targeted interventions or investment.<br></p>
+
+    <ul>
+        <li>Regional Employment Distribution: The dataset highlights the vast differences in employed population sizes across various states and union territories, reflecting the diverse economic structures and industrial profiles.</li>
+        <li>Urban-Rural Disparities: While urban centers like Delhi and Mumbai may exhibit higher absolute employment numbers, rural areas in states like Bihar and Uttar Pradesh contribute significantly to the overall employed population.</li>
+    </ul>
+    <h2>Estimated Unemployment Rate (%) by Region</h2>
+    <div class="text-center">
+    <img src="{{ url_for('static', filename='story3.png') }}" alt="Fourth Image" style="width: 50%;">
+</div>
+    <p>
+        Our dataset reveals a varied landscape of unemployment rates across different regions of India, reflecting the nuanced economic challenges faced by each area. From the bustling urban centers of Delhi and Mumbai to the serene valleys of Himachal Pradesh and the coastal beauty of Goa, each region grapples with its unique employment struggles. The data underscores the stark disparities, with some regions experiencing alarmingly high unemployment rates, such as Bihar and Jharkhand, while others, like Meghalaya and Sikkim, show comparatively lower figures. These numbers paint a vivid picture of the socio-economic complexities prevalent across the country, urging policymakers and stakeholders to devise targeted strategies for employment generation and economic revitalization.</p>
+    <ul>
+        <li>Regional Disparities: The data highlights significant variations in unemployment rates, emphasizing the need for tailored interventions to address specific regional challenges.</li>
+        <li>Impact of COVID-19: The pandemic's repercussions are evident in the elevated unemployment rates across several regions, underscoring the urgency for recovery measures and support systems.</li>
+        <li>Policy Implications: Understanding the regional nuances of unemployment is crucial for formulating effective policies and initiatives aimed at fostering inclusive growth and mitigating socio-economic disparities.</li>
+        
+    </ul>
+</div>
+    
+    <h2 id="team-info">Team Information</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-leader">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Leader</h5>
+                        <p class="card-text">Name: Paila Pravalika</p>
+                        <p class="card-text">Position: Team Leader</p>
+                        <p class="card-text">Email:<br>  pailapravalika@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-member1">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 1</h5>
+                        <p class="card-text">Name:N sree vaishnavi</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email: sreevaishnavinakka@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-member2">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 2</h5>
+                        <p class="card-text">Name: Neelathi manoj</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email:<br>  neelathimanoj@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-member3">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 3</h5>
+                        <p class="card-text">Name: Nikhil Kumar</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email:<br> nikhilkumar@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>
+            <a href="https://www.instagram.com/drlankapalli_bullayya_college?igsh=ZTUxem50aG1kdXQ3"><i class="fab fa-instagram"></i> Follow us on Instagram</a>
+            <a href="mailto:sreevaishnavinakka@gmail.com"><i class="far fa-envelope"></i> Email us</a>
+            <a href="https://github.com/VAISHNAVI1576/721128805571"><i class="fab fa-github"></i> Visit us on GitHub</a>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript function to scroll to team information section when clicking on "Team Information" link
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.navbar-nav .nav-link[href="#team-info"]').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector('#team-info').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
